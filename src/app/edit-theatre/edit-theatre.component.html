@@ -1,0 +1,27 @@
+<div class="col-md-6 user-container">
+  <h2 class="text-center">Edit Theatre</h2>
+  <form [formGroup]="editForm" (ngSubmit)="onSubmit()">
+    <div class="hidden">
+      <input type="text" formControlName="theatreid" placeholder="theatreid" name="theatreid" class="form-control" id="theatreid" readonly>
+    </div>
+    <div class="form-group">
+      <label for="theatrename">Theatre Name:</label>
+      <input type="text" formControlName="theatrename" placeholder="Theatre name" name="theatrename" class="form-control" id="theatrename" required>
+	  <span *ngIf="!editForm.controls.theatrename.value" style="font-size:12px;color:red">Please enter Theater Name</span>
+    </div>
+
+    <div class="form-group">
+      <label for="movieName">Movie Name:</label>
+      <input type="text" formControlName="movieName" placeholder="Movie Name" name="movieName" class="form-control" id="movieName" required>
+	  <span *ngIf="!editForm.controls.movieName.value" style="font-size:12px;color:red">Please enter Theater Name</span>
+    </div>
+
+    <div class="form-group">
+      <label for="showTime">Show Time:</label>
+      <input type="text" formControlName="showTime" placeholder="Show Time" name="showTime" class="form-control" id="showTime" required>
+	  <span *ngIf="!editForm.controls.showTime.value" style="font-size:12px;color:red">Please enter Theater Name</span>
+    </div>
+
+    <button class="btn btn-success">Update Theatre</button>
+  </form>
+</div>

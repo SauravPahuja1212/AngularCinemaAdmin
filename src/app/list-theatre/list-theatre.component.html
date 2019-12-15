@@ -1,0 +1,27 @@
+  <div class="col-md-6 user-container">
+    <h2 style="margin: auto"> Theatre Details</h2>
+    <div style="text-align:right"><button class="btn btn-danger" style="width: 152px;" (click)="addTheatre()"> Add New Theatre </button></div>
+	<br/>
+    <table class="table table-striped">
+      <thead>
+      <tr>
+        <th>Theatre Name</th>
+        <th>Movies</th>
+        <th>Show Time</th>
+        <th>Booked Slots</th>
+        <th>  </th>
+        <th>  </th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let theatre of theatres">
+        <td>{{theatre.theaterName}}</td>
+        <td>{{theatre.movieName}}</td>
+        <td>{{theatre.showTime}}</td>
+        <td>{{theatre.slots}}</td>
+        <td><button class="btn btn-success" (click)="deleteTheatre(theatre)"> Delete</button></td>
+        <td><button class="btn btn-success" (click)="editTheatre(theatre)" style="margin-left: 20px;"> Edit</button></td>
+      </tr>
+      </tbody>
+    </table>
+  </div>

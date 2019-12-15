@@ -1,0 +1,13 @@
+<div class="col-md-6 user-container">
+  <h2 class="text-center">Add Theatre</h2>
+  <form [formGroup]="addForm" (ngSubmit)="onSubmit()">
+
+    <div class="form-group">
+      <label for="theatrename">Theatre Name:</label>
+      <input type="text" formControlName="theatrename" placeholder="Theatre Name" name="theatrename" class="form-control" id="theatrename" required>
+	  <span *ngIf="!addForm.controls.theatrename.value" style="font-size:12px;color:red">Please enter Theater Name</span>
+    </div>
+
+    <button class="btn btn-success">Add Theatre</button>
+  </form>
+</div>
